@@ -8,7 +8,10 @@ terraform {
   }
 }
 
+# Removing provider block. Will be provided in the calling job main.tf
+/*
 provider "aws" {
   region  = var.region
   profile = "terraform"
 }
+*/
