@@ -31,3 +31,10 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "backend" {
     }
   }
 }
+
+resource "aws_s3_bucket_versioning" "backend" {
+  bucket = aws_s3_bucket.backend.id
+  versioning_configuration {
+    status = "Enabled"
+  }
+}
